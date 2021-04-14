@@ -14,7 +14,7 @@ body {
 
 .weather_details {
   background-color: rgba(122, 122, 248, 0.4);
-  height: 5rem;
+  height: 8rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -28,6 +28,7 @@ body {
   border-left: 1px solid black;
   list-style: none;
   height: 40px;
+  padding-left: 5px;
 }
 
 .weather_details span {
