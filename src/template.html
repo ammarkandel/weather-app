@@ -7,12 +7,19 @@
   <title>Current Weather</title>
 </head>
 <body>
-  <form>
-    <input type="text" class='city' value="cairo" />
-    <input type="submit" id='search' value="Search" />
-  </form>
+  <nav class="navbar">
+     <div class="logo">
+       CurrentWeather
+     </div>
+     <form>
+       <input type="text" class='city' value="cairo" />
+       <input type="submit" id='search' value="Search" />
+     </form>
+     <button class="display-degree">F</button>
+  </nav>
   <div id='city_weather'>
     <h1 class="city_name"></h1>
+    <ul class="weather_details"></ul>
   </div>
 </body>
 </html>
