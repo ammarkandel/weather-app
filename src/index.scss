@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300&display=swap');
+
 * {
   padding: 0;
   margin: 0;
@@ -56,7 +57,8 @@ body {
   padding: 5px;
 }
 
-#search, .display-degree {
+#search,
+.display-degree {
   padding: 5px;
   cursor: pointer;
 }
@@ -68,5 +70,5 @@ img {
 .city_name {
   text-align: center;
   color: white;
-  padding: 20px
+  padding: 20px;
 }
