@@ -1,9 +1,11 @@
 import printData from './accessData.js';
 import windowLoad from './windowLoad.js';
 import searchEvent from './searchEvent.js';
+import degreeFetch from './convertDegree.js';
 
 windowLoad();
 searchEvent();
+degreeFetch();
 
 const fetchCities = async (url) => {
   try {
