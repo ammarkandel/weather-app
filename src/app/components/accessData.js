@@ -16,7 +16,7 @@ const printData = (data) => {
 
   const temp = document.createElement('li');
   const btnDeg = document.getElementById('convert').textContent.slice(0, 1);
-  let degree;
+  let degree = '';
   btnDeg === 'F' ? degree = 'C' : degree = 'F';
   temp.innerHTML = `<span>Tempreture</span> ${data.main.temp} °${degree}`;
   weatherDetails.appendChild(temp);
