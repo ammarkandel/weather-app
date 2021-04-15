@@ -1,7 +1,7 @@
-import printData from './accessData.js';
-import windowLoad from './windowLoad.js';
-import searchEvent from './searchEvent.js';
-import degreeFetch from './convertDegree.js';
+import printData from './accessData';
+import windowLoad from './windowLoad';
+import searchEvent from './searchEvent';
+import degreeFetch from './convertDegree';
 
 windowLoad();
 searchEvent();
@@ -11,13 +11,13 @@ const fetchCities = async (url) => {
   try {
     const res = await fetch(url);
     if (!res.ok) {
-       throw new Error(res.status);
+      throw new Error(res.status);
     }
     const data = await res.json();
     printData(data);
-    } catch (error) {
-       console.log(error);
-    }
-}
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export default fetchCities;
