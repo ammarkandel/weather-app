@@ -11,7 +11,7 @@ const printData = (data) => {
   <li><span>Sun rise</span> ${sunrise}</li>
   <li><span>Sun set</span> ${sunset}</li>
   <li><span>Wind speed</span> ${data.wind.speed} meters/s</li>
-  <li id='tempval'><span>Tempreture</span> ${data.main.temp}</li>
+  <li id='tempval'><span>Temperature</span> ${data.main.temp}</li>
   <li><span>Weather</span> ${data.weather[0].description} <img src='http://openweathermap.org/img/w/${data.weather[0].icon}.png'></li>
   `;
 };
