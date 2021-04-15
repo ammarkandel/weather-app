@@ -7,8 +7,11 @@ const changeDgree = (data) => {
   const temp = document.createElement('li');
   const btnDeg = document.getElementById('convert');
   let degree;
-
-  btnDeg.textContent.slice(0, 1) === 'F' ? degree = 'C' : degree = 'F';
+  if (btnDeg.textContent.slice(0, 1) === 'F') {
+    degree = 'C';
+  } else {
+    degree = 'F';
+  }
   temp.innerHTML = `<span>Tempreture</span> ${data.main.temp} °${degree}`;
   weatherDetails.appendChild(temp);
 };
