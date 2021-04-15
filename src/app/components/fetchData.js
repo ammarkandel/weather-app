@@ -11,7 +11,7 @@ let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3471d
 const fetchCities = async (url) => {
   const res = await fetch(url);
   if (!res.ok) {
-  throw new Error(res.status);
+    throw new Error(res.status);
   }
   const data = await res.json();
   printData(data);
