@@ -8,7 +8,16 @@ const submitCityName = document.getElementById('search');
 let city = cityName.value;
 let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3471d2dec0a5bbfa50a6a6a9569cbe0a`;
 
-window.onload = () => { fetchCities(url) };
+const fetchCities = async (url) => {
+  const res = await fetch(url);
+  if (!res.ok) {
+  throw new Error(res.status);
+  }
+  const data = await res.json();
+  printData(data);
+};
+
+window.onload = () => { fetchCities(url); };
 
 submitCityName.addEventListener('click', (e) => {
   e.preventDefault();
@@ -23,16 +32,3 @@ convertBtn.addEventListener('click', () => {
   url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3471d2dec0a5bbfa50a6a6a9569cbe0a${printDegreeVal}`;
   fetchCities(url);
 });
-
-const fetchCities = async (url) => {
-  try {
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error(res.status);
-    }
-    const data = await res.json();
-    printData(data);
-  } catch (error) {
-    console.log(error);
-  }
-};
